@@ -9,7 +9,7 @@ RELEASE_HEADER_PATTERN = re.compile(r"^## (\d+\.\d+\.\d+)\s*(\(.*\))?\s*$")
 
 
 def main() -> None:
-    with open(RELEASE_NOTES_FILE) as f:
+    with open(RELEASE_NOTES_FILE, encoding="utf-8") as f:
         lines = f.readlines()
 
     for i, line in enumerate(lines):
